@@ -3,6 +3,15 @@
   <head>
     <title>Mon portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Guillaume Yves" />
+    <meta property="og:description" content="Portfolio" />
+    <meta
+      property="og:image"
+      content="https://guillaumeyves.github.io/Portfolio/assets/images/favicon.ico" />
+    <meta
+      property="og:url"
+      content="https://guillaumeyves.github.io/Portfolio" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -151,7 +160,11 @@
           style="max-width: 80vw">
           <div class="carousel-inner">
             <div class="item active">
-              <video controls class="img-fluid" style="max-width: 100%">
+              <video
+                controls
+                class="img-fluid video-carousel"
+                data-idx="0"
+                style="max-width: 100%">
                 <source
                   src="assets/videos/overview_tedorha.mp4"
                   type="video/mp4" />
@@ -165,7 +178,11 @@
             </div>
 
             <div class="item">
-              <video controls class="img-fluid" style="max-width: 100%">
+              <video
+                controls
+                class="img-fluid video-carousel"
+                data-idx="1"
+                style="max-width: 100%">
                 <source
                   src="assets/videos/test_tedorha_1.mp4"
                   type="video/mp4" />
@@ -199,6 +216,28 @@
         </div>
       </div>
     </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".video-carousel").on("play", function () {
+          $(".video-carousel")
+            .not(this)
+            .each(function () {
+              this.pause();
+            });
+        });
+
+        $(".video-carousel").on("play", function () {
+          $("#videoCarousel").carousel("pause");
+        });
+
+        $("#videoCarousel").on("slide.bs.carousel", function () {
+          $(".video-carousel").each(function () {
+            this.pause();
+          });
+        });
+      });
+    </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -271,16 +310,26 @@
             chevronIcon.classList.remove("fa-chevron-down");
             chevronIcon.classList.add("fa-chevron-up");
 
-            var videoCarousel = document.getElementById("videoCarousel");
-            videoCarousel.scrollIntoView({ behavior: "smooth" });
+            additionalContent.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
           } else {
             additionalContent.style.opacity = "0";
             moreLabel.textContent = "Plus";
             chevronIcon.classList.remove("fa-chevron-up");
             chevronIcon.classList.add("fa-chevron-down");
+
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            additionalContent.style.transition = "opacity 0.5s ease-in-out";
             setTimeout(function () {
               additionalContent.style.display = "none";
             }, 500);
+
+            var videos = document.querySelectorAll(".video-carousel");
+            videos.forEach(function (video) {
+              video.pause();
+            });
           }
         });
     </script>
