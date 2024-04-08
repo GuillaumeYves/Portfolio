@@ -14,6 +14,15 @@
  *= require_self
  */
 
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 @keyframes fadeInBody {
   0% {
     opacity: 0;
@@ -25,7 +34,6 @@
 
 body {
   opacity: 0;
-  overflow: hidden;
   animation: fadeInBody 0.3s ease-in forwards;
 }
 
