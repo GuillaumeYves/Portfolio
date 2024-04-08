@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mon portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/stylesheets/application.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        font-family: "Oswald", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: #081228; color: #ffffff">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent"
+      style="filter: blur">
+      <div class="container d-flex text-center">
+        <h3 class="navbar-item">Guillaume YVES</h3>
+      </div>
+    </nav>
+
+    <div class="portfolio-container">
+      <div class="stars"></div>
+      <div class="welcome-message text-center" id="welcome-message">
+        <h1 style="margin-bottom: 5vh">
+          Bienvenue sur mon Portfolio <i class="fas fa-briefcase"></i>
+        </h1>
+
+        <div class="row">
+          <div class="col-md-6">
+            <img
+              src="assets/images/thumbnail.jpg"
+              class="img-fluid"
+              alt="photo"
+              style="max-width: 100%; max-height: 30vh; border: solid white" />
+            <hr style="width: 50%" />
+          </div>
+
+          <div class="col-md-6 text-left" style="background-color: #081228">
+            <h4 style="margin-bottom: 2vh">
+              26 ans, de la région Lyonnaise, en reconversion dans le but de
+              vivre de ma passion.<br />
+              Je suis régulièrement des formations pour enrichir mon
+              parcours.<br />
+              <br />
+              Développeur Fullstack dominante back-end.<br />
+              Mes stacks; <br />
+              <p id="stacks" style="color: red"></p>
+              J'utilise régulièrement PostgreSQL et MySQL en fonction de mes
+              projets.<br />
+              J'ai également eu l'occasion de travailler avec AWS et Heroku.<br />
+              Le tout sous WSL.<br />
+              <br />
+              Mon manque d'expérience est compensé par mon envie d'apprendre et
+              ma volonté de réussir.<br />
+              J'allie mes connaissances commerciales à mes conaissances
+              techniques pour apporter un nouveau regard sur un projet.
+            </h4>
+
+            <div class="socials text-center">
+              <a
+                href="https://github.com/GuillaumeYves"
+                target="_blank"
+                style="margin-right: 2vw"
+                ><i class="fab fa-github fa-2x" style="color: white"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/guillaume-yves-23930a293/"
+                target="_blank"
+                ><i class="fab fa-linkedin fa-2x" style="color: white"></i
+              ></a>
+              <br />
+              <br />
+              <a
+                href="assets/pdfs/Cv_03_2024.pdf"
+                target="_blank"
+                style="color: white"
+                >Mon CV</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="projects text-center"
+        id="projects"
+        style="background-color: #081228; margin-top: 10vh">
+        <h1>Mon dernier projet <i class="fas fa-wrench"></i></h1>
+        <h5 style="margin-bottom: 4vh">
+          D'autres projets sont disponibles sur mon GitHub au besoin.
+        </h5>
+        <div class="text-center">
+          <h2>"Tedorha" (WIP)</h2>
+          <h4>
+            Mon dernier projet, qui est toujours en cours, est un web RPG type
+            Shakes&Fidget.<br />
+            Les fonctionnalités sont très similaires, je me suis permis
+            d'ajouter un peu de complexité à travers les compétences et
+            autres.<br />
+            <br />
+            Ce projet me permet avant tout de pouvoir m'exercer avec une BDD
+            plus volumineuse qu'un projet classique type "web".
+          </h4>
+        </div>
+        <br />
+        <div class="text-left">
+          <h4>
+            Pour ce qui est du côté technique;<br />
+            <br />
+            - J'utilise la gem "devise" pour gérer ma connexion et création de
+            compte<br />
+            - La gem "whenever", pour les méthodes en background (toutes les X
+            heures, do Y method)<br />
+            - La BDD utilisée est PostgreSQL<br />
+            - Ce projet est composé à 62.5% de Ruby, 35.9% de HTML et 1.6% de
+            Javascript et autre<br />
+            - Pour les illustrations, tout est fait grâce à une IA<br />
+          </h4>
+
+          <div class="text-center" id="toggleButton" style="cursor: pointer">
+            <i id="chevronIcon" class="fas fa-chevron-down"></i>
+            <span id="moreLabel">Plus</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="text-center"
+        id="additionalContent"
+        style="display: none; margin-top: 2vh">
+        <div
+          id="videoCarousel"
+          class="carousel slide"
+          data-ride="carousel"
+          style="max-width: 80vw">
+          <div class="carousel-inner">
+            <div class="item active">
+              <video controls class="img-fluid" style="max-width: 100%">
+                <source
+                  src="assets/videos/overview_tedorha.mp4"
+                  type="video/mp4" />
+                Il semblerait que votre navigateur ne supporte pas les vidéos.
+              </video>
+              <div class="carousel-caption">
+                <h2 style="color: black">
+                  Connexion et overview de l'interface
+                </h2>
+              </div>
+            </div>
+
+            <div class="item">
+              <video controls class="img-fluid" style="max-width: 100%">
+                <source
+                  src="assets/videos/test_tedorha_1.mp4"
+                  type="video/mp4" />
+                Il semblerait que votre navigateur ne supporte pas les vidéos.
+              </video>
+              <div class="carousel-caption">
+                <h2 style="color: black">Skills, équipements et combat</h2>
+              </div>
+            </div>
+          </div>
+          <a
+            class="left carousel-control"
+            href="#videoCarousel"
+            role="button"
+            data-slide="prev">
+            <span
+              class="glyphicon glyphicon-chevron-left"
+              aria-hidden="true"
+              style="color: black"></span>
+          </a>
+          <a
+            class="right carousel-control"
+            href="#videoCarousel"
+            role="button"
+            data-slide="next">
+            <span
+              class="glyphicon glyphicon-chevron-right"
+              aria-hidden="true"
+              style="color: black"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const starsContainer = document.querySelector(".stars");
+        const numberOfStars = 100;
+
+        for (let i = 0; i < numberOfStars; i++) {
+          const star = document.createElement("div");
+          star.classList.add("star");
+          star.style.top = `${Math.random() * 100}%`;
+          star.style.left = `${Math.random() * 100}%`;
+          star.style.animationDelay = `${Math.random() * 5}s`;
+          starsContainer.appendChild(star);
+        }
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $("#welcome-message").addClass("show");
+      });
+    </script>
+
+    <script>
+      var words = ["Ruby", "Python", "PHP", "Javascript", "CSS", "HTML"];
+      var currentWordIndex = 0;
+      var currentCharIndex = 0;
+      var speed = 100;
+
+      function typeWriter() {
+        var word = words[currentWordIndex];
+        if (currentCharIndex < word.length) {
+          document.getElementById("stacks").innerHTML = word.substring(
+            0,
+            currentCharIndex + 1
+          );
+          currentCharIndex++;
+          setTimeout(typeWriter, speed);
+        } else {
+          currentWordIndex++;
+          if (currentWordIndex >= words.length) {
+            currentWordIndex = 0;
+          }
+          currentCharIndex = 0;
+          setTimeout(typeWriter, speed * 10);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        typeWriter();
+      });
+    </script>
+
+    <script>
+      document
+        .getElementById("toggleButton")
+        .addEventListener("click", function () {
+          var additionalContent = document.getElementById("additionalContent");
+          var moreLabel = document.getElementById("moreLabel");
+          var chevronIcon = document.getElementById("chevronIcon");
+
+          if (additionalContent.style.display === "none") {
+            additionalContent.style.display = "block";
+            additionalContent.style.opacity = "0";
+            additionalContent.style.transition = "opacity 0.5s ease-in-out";
+            setTimeout(function () {
+              additionalContent.style.opacity = "1";
+            }, 100);
+            moreLabel.textContent = "Moins";
+            chevronIcon.classList.remove("fa-chevron-down");
+            chevronIcon.classList.add("fa-chevron-up");
+
+            var videoCarousel = document.getElementById("videoCarousel");
+            videoCarousel.scrollIntoView({ behavior: "smooth" });
+          } else {
+            additionalContent.style.opacity = "0";
+            moreLabel.textContent = "Plus";
+            chevronIcon.classList.remove("fa-chevron-up");
+            chevronIcon.classList.add("fa-chevron-down");
+            setTimeout(function () {
+              additionalContent.style.display = "none";
+            }, 500);
+          }
+        });
+    </script>
+  </body>
+</html>
