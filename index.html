@@ -25,8 +25,6 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
       body {
         font-family: "Oswald", sans-serif;
@@ -34,6 +32,14 @@
         color: #ffffff;
         display: flex;
         flex-direction: column;
+      }
+      .carousel-inner {
+        height: 50%;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .portfolio-container {
+        max-width: 1201px;
       }
     </style>
   </head>
@@ -80,11 +86,6 @@
               projets.<br />
               J'ai également eu l'occasion de travailler avec AWS et Heroku.<br />
               Le tout sous WSL.<br />
-              <br />
-              Mon manque d'expérience est compensé par mon envie d'apprendre et
-              ma volonté de réussir.<br />
-              J'allie mes connaissances commerciales à mes conaissances
-              techniques pour apporter un nouveau regard sur un projet.
             </h4>
 
             <div class="socials text-center">
@@ -102,7 +103,7 @@
               <br />
               <br />
               <a
-                href="assets/pdfs/Cv_04_2024.pdf"
+                href="assets/pdfs/CV.06.2024.pdf"
                 target="_blank"
                 style="color: white"
                 >Mon CV</a
@@ -111,32 +112,110 @@
           </div>
         </div>
       </div>
-
       <div
         class="projects text-center"
         id="projects"
         style="backdrop-filter: blur(10px); margin-top: 5vh">
-        <h1>Mon dernier projet <i class="fas fa-wrench"></i></h1>
-        <h5 style="margin-bottom: 2vh">
-          D'autres projets sont disponibles sur mon GitHub au besoin.
-        </h5>
-        <div class="text-center">
-          <h2>"Tedorha" (WIP)</h2>
+        <h1>Mes projets <i class="fas fa-wrench"></i></h1>
+        <br class="mb-5" />
+        <div class="text-left">
+          <h2 style="text-decoration: underline">actmi.fr</h2>
+          <h4>
+            Projet fait pour ACTMI, une société qui évolue dans les secteurs
+            d'activités de la tuyauterie, chaudronnerie et maintenance
+            industrielle.<br />
+            Le site, fait sous Wordpress à la demande du client, arbore un
+            design très sobre et industriel, choisis par ACTMI avec un thème
+            également pré-définis.<br />
+            Le besoin principal étant la proximité avec sa clientelle et la
+            facilité d'entretiens du site.<br />
+            <br />
+            C'est pourquoi sur ce site nous retrouvons l'essentiel;<br />
+            - Un formulaire de contact <br />
+            - Une navbar avec coordonnées <br />
+            - Plusieurs pages en fonction de la catégorie de travaux, qui
+            permettent de visualiser la qualité de travail fournie par
+            l'entreprise.
+          </h4>
+          <div class="text-center" id="toggleButton1" style="cursor: pointer">
+            <i id="chevronIcon1" class="fas fa-chevron-down"></i>
+            <span id="moreLabel1">Plus</span>
+          </div>
+        </div>
+
+        <div
+          class="text-center"
+          id="additionalContent1"
+          style="display: none; margin-top: 2vh">
+          <div
+            id="imageCarousel1"
+            class="carousel slide"
+            data-ride="carousel"
+            data-interval="5000">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img
+                  src="assets/images/actmi1.png"
+                  alt="Showcase 1"
+                  class="carousel-image" />
+              </div>
+
+              <div class="item">
+                <img
+                  src="assets/images/actmi2.png"
+                  alt="Showcase 2"
+                  class="carousel-image" />
+              </div>
+
+              <div class="item">
+                <img
+                  src="assets/images/actmi3.png"
+                  alt="Showcase 3"
+                  class="carousel-image" />
+              </div>
+
+              <div class="item">
+                <img
+                  src="assets/images/actmi4.png"
+                  alt="Showcase 4"
+                  class="carousel-image" />
+              </div>
+            </div>
+            <a
+              class="left carousel-control"
+              href="#imageCarousel1"
+              role="button"
+              data-slide="prev">
+              <span
+                class="glyphicon glyphicon-chevron-left"
+                aria-hidden="true"
+                style="color: black"></span>
+            </a>
+            <a
+              class="right carousel-control"
+              href="#imageCarousel1"
+              role="button"
+              data-slide="next">
+              <span
+                class="glyphicon glyphicon-chevron-right"
+                aria-hidden="true"
+                style="color: black"></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="text-right">
+          <h2 style="text-decoration: underline">Web RPG (WIP)</h2>
           <h4>
             Mon dernier projet, qui est toujours en cours, est un web RPG type
             Shakes&Fidget.<br />
             Les fonctionnalités sont très similaires, je me suis permis
             d'ajouter un peu de complexité à travers les compétences et
             autres.<br />
-            <br />
             Ce projet me permet avant tout de pouvoir m'exercer avec une BDD
             plus volumineuse qu'un projet classique type "web".
           </h4>
-        </div>
-        <br />
-        <div class="text-left">
           <h4>
-            Pour ce qui est du côté technique;<br />
             <br />
             - J'utilise la gem "devise" pour gérer ma connexion et création de
             compte<br />
@@ -148,188 +227,149 @@
             - Pour les illustrations, tout est fait grâce à une IA<br />
           </h4>
 
-          <div class="text-center" id="toggleButton" style="cursor: pointer">
-            <i id="chevronIcon" class="fas fa-chevron-down"></i>
-            <span id="moreLabel">Plus</span>
+          <div class="text-center" id="toggleButton2" style="cursor: pointer">
+            <i id="chevronIcon2" class="fas fa-chevron-down"></i>
+            <span id="moreLabel2">Plus</span>
           </div>
         </div>
-      </div>
 
-      <div
-        class="text-center"
-        id="additionalContent"
-        style="display: none; margin-top: 2vh">
         <div
-          id="videoCarousel"
-          class="carousel slide"
-          data-ride="carousel"
-          style="max-width: 80vw">
-          <div class="carousel-inner">
-            <div class="item active">
-              <video
-                controls
-                class="img-fluid video-carousel"
-                data-idx="0"
-                style="max-width: 100%">
-                <source
-                  src="assets/videos/overview_tedorha.mp4"
-                  type="video/mp4" />
-                Il semblerait que votre navigateur ne supporte pas les vidéos.
-              </video>
-            </div>
+          class="text-center"
+          id="additionalContent2"
+          style="display: none; margin-top: 2vh">
+          <div
+            id="videoCarousel"
+            class="carousel slide"
+            data-ride="carousel"
+            data-interval="5000">
+            <div class="carousel-inner">
+              <div class="item active">
+                <video
+                  controls
+                  class="img-fluid video-carousel"
+                  data-idx="0"
+                  style="max-width: 100%">
+                  <source
+                    src="assets/videos/overview_tedorha.mp4"
+                    type="video/mp4" />
+                  Il semblerait que votre navigateur ne supporte pas les vidéos.
+                </video>
+              </div>
 
-            <div class="item">
-              <video
-                controls
-                class="img-fluid video-carousel"
-                data-idx="1"
-                style="max-width: 100%">
-                <source
-                  src="assets/videos/test_tedorha_1.mp4"
-                  type="video/mp4" />
-                Il semblerait que votre navigateur ne supporte pas les vidéos.
-              </video>
+              <div class="item">
+                <video
+                  controls
+                  class="img-fluid video-carousel"
+                  data-idx="1"
+                  style="max-width: 100%">
+                  <source
+                    src="assets/videos/test_tedorha_1.mp4"
+                    type="video/mp4" />
+                  Il semblerait que votre navigateur ne supporte pas les vidéos.
+                </video>
+              </div>
+
+              <div class="item">
+                <video
+                  controls
+                  class="img-fluid video-carousel"
+                  data-idx="2"
+                  style="max-width: 100%">
+                  <source
+                    src="assets/videos/combat_logs_showcase.mp4"
+                    type="video/mp4" />
+                  Il semblerait que votre navigateur ne supporte pas les vidéos.
+                </video>
+              </div>
             </div>
+            <a
+              class="left carousel-control"
+              href="#videoCarousel"
+              role="button"
+              data-slide="prev">
+              <span
+                class="glyphicon glyphicon-chevron-left"
+                aria-hidden="true"
+                style="color: black"></span>
+            </a>
+            <a
+              class="right carousel-control"
+              href="#videoCarousel"
+              role="button"
+              data-slide="next">
+              <span
+                class="glyphicon glyphicon-chevron-right"
+                aria-hidden="true"
+                style="color: black"></span>
+            </a>
           </div>
-          <a
-            class="left carousel-control"
-            href="#videoCarousel"
-            role="button"
-            data-slide="prev">
-            <span
-              class="glyphicon glyphicon-chevron-left"
-              aria-hidden="true"
-              style="color: black"></span>
-          </a>
-          <a
-            class="right carousel-control"
-            href="#videoCarousel"
-            role="button"
-            data-slide="next">
-            <span
-              class="glyphicon glyphicon-chevron-right"
-              aria-hidden="true"
-              style="color: black"></span>
-          </a>
+        </div>
+
+        <div class="text-left">
+          <h2 style="text-decoration: underline">Trouve ton Asso</h2>
+          <h4>
+            Projet fait en groupe avec The Hacking Project.<br />
+            Trouve ton Asso est une idée commune afin de rassembler les
+            associations avec leurs bénévoles. La plateforme permet de
+            s'inscrire et se connecter, faire un don ou encore rejoindre un
+            évènement.<br />
+            Il y a 3 type d'accès; L'user, L'association et L'admin. Ces 3 accès
+            donnent l'autorisation à différentes fonctionnalités et pages du
+            site.<br />
+            Le projet est composé majoritairement de Ruby, ce qui nous permet
+            d'utiliser des gems tels que stripe et devise. Nous avons aussi
+            utilisé une api google maps sur les profils des associations,
+            permettant des mieux les situer.
+          </h4>
+          <div class="text-center" id="toggleButton3" style="cursor: pointer">
+            <i id="chevronIcon3" class="fas fa-chevron-down"></i>
+            <span id="moreLabel3">Plus</span>
+          </div>
+        </div>
+
+        <div
+          class="text-center"
+          id="additionalContent3"
+          style="display: none; margin-top: 2vh">
+          <div
+            id="imageCarousel1"
+            class="carousel slide"
+            data-ride="carousel"
+            data-interval="5000">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img
+                  src="assets/images/trouvetonasso1.png"
+                  alt="Trouve ton Asso 1"
+                  class="carousel-image" />
+              </div>
+            </div>
+            <a
+              class="left carousel-control"
+              href="#imageCarousel1"
+              role="button"
+              data-slide="prev">
+              <span
+                class="glyphicon glyphicon-chevron-left"
+                aria-hidden="true"
+                style="color: black"></span>
+            </a>
+            <a
+              class="right carousel-control"
+              href="#imageCarousel1"
+              role="button"
+              data-slide="next">
+              <span
+                class="glyphicon glyphicon-chevron-right"
+                aria-hidden="true"
+                style="color: black"></span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-
-    <script>
-      $(document).ready(function () {
-        $(".video-carousel").on("play", function () {
-          $(".video-carousel")
-            .not(this)
-            .each(function () {
-              this.pause();
-            });
-        });
-
-        $(".video-carousel").on("play", function () {
-          $("#videoCarousel").carousel("pause");
-        });
-
-        $("#videoCarousel").on("slide.bs.carousel", function () {
-          $(".video-carousel").each(function () {
-            this.pause();
-          });
-        });
-      });
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const starsContainer = document.querySelector(".stars");
-        const numberOfStars = 100;
-
-        for (let i = 0; i < numberOfStars; i++) {
-          const star = document.createElement("div");
-          star.classList.add("star");
-          star.style.top = `${Math.random() * 100}%`;
-          star.style.left = `${Math.random() * 100}%`;
-          star.style.animationDelay = `${Math.random() * 5}s`;
-          starsContainer.appendChild(star);
-        }
-      });
-    </script>
-
-    <script>
-      $(document).ready(function () {
-        $("#welcome-message").addClass("show");
-      });
-    </script>
-
-    <script>
-      var words = ["Ruby", "Python", "PHP", "Javascript", "CSS", "HTML"];
-      var currentWordIndex = 0;
-      var currentCharIndex = 0;
-      var speed = 100;
-
-      function typeWriter() {
-        var word = words[currentWordIndex];
-        if (currentCharIndex < word.length) {
-          document.getElementById("stacks").innerHTML = word.substring(
-            0,
-            currentCharIndex + 1
-          );
-          currentCharIndex++;
-          setTimeout(typeWriter, speed);
-        } else {
-          currentWordIndex++;
-          if (currentWordIndex >= words.length) {
-            currentWordIndex = 0;
-          }
-          currentCharIndex = 0;
-          setTimeout(typeWriter, speed * 10);
-        }
-      }
-
-      document.addEventListener("DOMContentLoaded", function () {
-        typeWriter();
-      });
-    </script>
-
-    <script>
-      document
-        .getElementById("toggleButton")
-        .addEventListener("click", function () {
-          var additionalContent = document.getElementById("additionalContent");
-          var moreLabel = document.getElementById("moreLabel");
-          var chevronIcon = document.getElementById("chevronIcon");
-
-          if (additionalContent.style.display === "none") {
-            additionalContent.style.display = "block";
-            additionalContent.style.opacity = "0";
-            additionalContent.style.transition = "opacity 0.5s ease-in-out";
-            setTimeout(function () {
-              additionalContent.style.opacity = "1";
-            }, 100);
-            moreLabel.textContent = "Moins";
-            chevronIcon.classList.remove("fa-chevron-down");
-            chevronIcon.classList.add("fa-chevron-up");
-
-            additionalContent.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          } else {
-            additionalContent.style.opacity = "0";
-            moreLabel.textContent = "Plus";
-            chevronIcon.classList.remove("fa-chevron-up");
-            chevronIcon.classList.add("fa-chevron-down");
-
-            window.scrollTo({ top: 0, behavior: "smooth" });
-            additionalContent.style.transition = "opacity 0.5s ease-in-out";
-            setTimeout(function () {
-              additionalContent.style.display = "none";
-            }, 500);
-
-            var videos = document.querySelectorAll(".video-carousel");
-            videos.forEach(function (video) {
-              video.pause();
-            });
-          }
-        });
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
   </body>
 </html>
