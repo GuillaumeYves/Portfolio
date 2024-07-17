@@ -1,10 +1,39 @@
 $(document).ready(function () {
+  $(".video-carousel").each(function () {
+    this.muted = true; // Mute videos by default
+  });
+
   $(".video-carousel").on("play", function () {
     $(".video-carousel")
       .not(this)
       .each(function () {
         this.pause();
       });
+
+    // Pause carousel when a video is playing
+    $("#videoCarousel").carousel("pause");
+  });
+
+  $(".video-carousel").on("pause ended", function () {
+    // Resume carousel when no videos are playing
+    if (
+      $(".video-carousel").filter(function () {
+        return !this.paused;
+      }).length === 0
+    ) {
+      $("#videoCarousel").carousel("cycle");
+    }
+  });
+
+  // Prevent carousel from sliding if a video is playing
+  $("#videoCarousel").on("slide.bs.carousel", function (e) {
+    if (
+      $(".video-carousel").filter(function () {
+        return !this.paused;
+      }).length > 0
+    ) {
+      e.preventDefault();
+    }
   });
 
   const starsContainer = document.querySelector(".stars");

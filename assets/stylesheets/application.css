@@ -108,3 +108,37 @@ body {
   border-radius: 50%;
   animation: starsAnimation 5s infinite;
 }
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+  width: auto;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control.left {
+  margin-left: 30px;
+}
+
+.carousel-control.right {
+  margin-right: 30px;
+}
+
+.carousel-control .glyphicon {
+  color: black;
+  outline: auto black;
+  background-color: white;
+  opacity: 0.7;/
+}
+
+.carousel-control .glyphicon:hover {
+  opacity: 1;
+}
+
+.carousel-inner .item video {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
